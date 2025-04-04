@@ -8,8 +8,9 @@ import traceback
 from Bio import Entrez, SeqIO
 
 def search_ncbi_protein(protein_name, taxon_name, userid, email="s2667265@ed.ac.uk"):
-    # Set your email (NCBI requires this)
+    # Set email and apikey
     Entrez.email = email
+    Entrez.api_key = "ad817beb29bc7caecc6adc4a802660ece809"
 
     # Search query with protein name and taxon filter
     if taxon_name.isdigit():
